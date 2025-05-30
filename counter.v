@@ -19,8 +19,7 @@ module programmable_counter (
             counter_reg <= counter_reg + 1; // Increment counter by 1
         end
     end
-    
-    // Tri-state output control
+
   assign count = (~oe_n) ? counter_reg : 8'bz;  // Tri-state output to allow counter_reg OR high-impedance output
     
 endmodule
